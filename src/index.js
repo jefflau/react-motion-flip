@@ -115,6 +115,7 @@ class FlipMotion extends Component<void, Props, State> {
             {styles.map((item) =>
               <ChildComponent
                 key={item.key}
+                className={this.props.childClassName}
                 style={item.style && {
                   ...childStyle,
                   opacity: item.style.opacity,
@@ -158,6 +159,7 @@ type Props = {
   component?: string | ReactClass,
   childComponent?: string | ReactClass,
   className?: string,
+  childClassName?: string
 }
 
 export default FlipMotion
